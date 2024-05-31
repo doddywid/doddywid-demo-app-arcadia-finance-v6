@@ -4,7 +4,12 @@ This repository provides updated version of distributed app demo called "Arcadia
 The app is original work of Matt from here https://gitlab.com/arcadia-application.
 
 This repository is updated from v3 here https://github.com/doddywid/doddywid-demo-app-arcadia-finance-v3. The updates are
-1. Smaller 
+1. Smaller image size (less than 200MB each)
+2. Richer environment variable
+   Previously there are only 3 environment variable exposed. Now, more environment variable are exposed to control communication flow between microservices.
+   Please refer to this page
+3. Small fix on character allowed for "arcadia_sitename" environment variable
+   Previously only alpha-numeric character is allowed. Now, anything but whitespace can be used.
 
 
 
