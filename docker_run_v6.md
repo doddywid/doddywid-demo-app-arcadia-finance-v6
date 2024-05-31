@@ -10,9 +10,9 @@ Example of docker run command
 
 The command follows ordinary docker command structure.
 The required environment variables are
-|  No  | Environment Variable Name | Sample Value        | Description                                                                                                   |
-|:----:|:--------------------------|:--------------------|:--------------------------------------------------------------------------------------------------------------|
-|  1   | arcadia_appsite           | aws2                | Site name on where the particular microservices is deployed.                                                  |
-|  2   | arcadia_domain            | arcadia.example.com | The domain name, used by containers to comunicate to other microservices.                                     |
-|  3   | arcadia_proto             | https://            | The protocol, can be either "https://" or "http://", used by containers to comunicate to other microservices. |
+|  No  | Environment Variable Name | Sample Value        | Required on Docker Image  | Description                                                                                                   |
+|:----:|:--------------------------|:--------------------|:--------------------------|:--------------------------------------------------------------------------------------------------------------|
+|  1   | arcadia_appsite           | aws2                | All                       | Site name on where the particular microservices is deployed.                                                  |
+|  2   | arcadia_domain            | arcadia.example.com |                           | The domain name, used by containers to comunicate to other microservices.                                     |
+|  3   | arcadia_proto             | https://            |                           | The protocol, can be either "https://" or "http://", used by containers to comunicate to other microservices. |
 
