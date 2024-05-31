@@ -10,6 +10,9 @@ Example of docker run command
 Note: 
 - need to create docker network "internal" with "docker nework create internal"
 
+
+
+
 The command follows ordinary docker command structure.
 The required environment variables are
 |  No  | Environment Variable Name | Sample Value   | Required on Docker Image  | Description                                                                                                   |
