@@ -7,6 +7,8 @@ Example of docker run command
    docker run -dit --restart=always --name=app3 --net=internal -e arcadia_appsite="aws_x" -p 82:80 doddywid/arcadia-app3:v6
    docker run -dit --restart=always --name=backend --net=internal -e arcadia_appsite="aws_x" -p 83:80 doddywid/arcadia-backend:v6
 ```
+Note: 
+- need to create docker network "internal" with "docker nework create internal"
 
 The command follows ordinary docker command structure.
 The required environment variables are
