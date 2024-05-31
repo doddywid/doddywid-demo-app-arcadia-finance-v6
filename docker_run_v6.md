@@ -8,10 +8,10 @@ Example of docker run command
    docker run -dit --restart=always --name=backend --net=internal -e arcadia_appsite="aws_x" -p 83:80 doddywid/arcadia-backend:v6
 ```
 Note: 
-- need to create docker network "internal" with "docker nework create internal"
+- Need to create docker network "internal" with "docker nework create internal"
 
-
-
+</br>
+</br>
 
 The command follows ordinary docker command structure.
 The required environment variables are
@@ -25,4 +25,5 @@ The required environment variables are
 |  6   | arcadia_backend_proto     | http://        | mainapp, app2             | The protocol, can be either "https://" or "http://", used by containers to comunicate to other microservices. |
 |  7   | arcadia_backend_domain    | backend        | mainapp, app2             | The domain name, used by containers to comunicate to app2 microservice.                                       |
 
-The "arcadia_domain" previously used in v3 is now deprecated.
+Note: 
+- The "arcadia_domain" previously used in v3 is now deprecated.
