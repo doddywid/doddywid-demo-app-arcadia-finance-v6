@@ -14,8 +14,7 @@ This repository is updated from [v3](https://github.com/doddywid/doddywid-demo-a
 
 \
 \
-New docker run command is documented here [docker_run_v6.md](https://github.com/doddywid/doddywid-demo-app-arcadia-finance-v6/blob/main/docker_run_v6.md)
-
+New docker run command is documented here [docker_run_v6.md](https://github.com/doddywid/doddywid-demo-app-arcadia-finance-v6/blob/main/docker_run_v6.md).\
 Docker images are available in public repository on DockerHub as below
 | Container Name | Image Name 
 |----------------|---------------------------
