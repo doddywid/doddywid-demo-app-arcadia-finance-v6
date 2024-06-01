@@ -7,7 +7,7 @@ This repository is updated from [v3](https://github.com/doddywid/doddywid-demo-a
 **1. Smaller image size (less than 200MB each)**\
 **2. Richer environment variable**\
    Previously there are only 3 environment variable exposed. Now, more environment variable are exposed to control communication flow between microservices.
-   Please refer to this [page](https://github.com/doddywid/doddywid-demo-app-arcadia-finance-v6/blob/main/docker_run_v6.md).
+   Please refer to [docker_run_v6.md](https://github.com/doddywid/doddywid-demo-app-arcadia-finance-v6/blob/main/docker_run_v6.md).
    ![alt text](https://github.com/doddywid/doddywid-demo-app-arcadia-finance-v6/blob/main/arcadia%20application%20flow.png)
 **3. Small fix on character allowed for "arcadia_sitename" environment variable**\
    Previously only alpha-numeric character is allowed. Now, anything but whitespace can be used.
