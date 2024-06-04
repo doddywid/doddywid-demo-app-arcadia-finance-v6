@@ -8,7 +8,7 @@ Example of docker run command
    docker run -dit --restart=always --name=backend --net=internal -e arcadia_appsite="aws_x" -p 83:80 doddywid/arcadia-backend:v6
 ```
 Note: 
-- Need to create docker network "internal" with "docker nework create internal"
+- Need to create docker network "internal" with "docker network create internal"
 
 </br>
 </br>
