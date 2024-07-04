@@ -21,3 +21,7 @@ Docker images are available in public repository on DockerHub as below
 | app2           | doddywid/arcadia-app2:v6
 | app3           | doddywid/arcadia-app3:v6
 | backend        | doddywid/arcadia-backend:v6
+
+\
+**4. Added NGINX config file for using NGINX as LB**\
+   When using NGINX as LB for routing traffic to respective microservice, refer to [nginx-arcadia.conf](https://github.com/doddywid/doddywid-demo-app-arcadia-finance-v6/blob/main/nginx-arcadia.conf) file.
