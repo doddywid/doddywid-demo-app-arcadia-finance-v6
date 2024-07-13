@@ -2,10 +2,10 @@ The docker run (or K8s run/manifest file, respectively), now needs to have sever
 
 Example of docker run command 
 ```python
-   docker run -dit --restart=always --name=mainapp --net=internal -e arcadia_appsite="aws_x" -e arcadia_app2_proto="http://" -e arcadia_app2_domain="app2" -e arcadia_app3_proto="http://" -e arcadia_app3_domain="app3" -e arcadia_backend_proto="http://" -e arcadia_backend_domain="backend" -p 80:80 doddywid/arcadia-mainapp:v6
-   docker run -dit --restart=always --name=app2 --net=internal -e arcadia_appsite="aws_x" -e arcadia_backend_proto="http://" -e arcadia_backend_domain="backend" -p 81:80 doddywid/arcadia-app2:v6
-   docker run -dit --restart=always --name=app3 --net=internal -e arcadia_appsite="aws_x" -p 82:80 doddywid/arcadia-app3:v6
-   docker run -dit --restart=always --name=backend --net=internal -e arcadia_appsite="aws_x" -p 83:80 doddywid/arcadia-backend:v6
+   docker run -dit --restart=always --name=mainapp --net=internal -e arcadia_appsite="aws_x" -e arcadia_app2_proto="http://" -e arcadia_app2_domain="app2" -e arcadia_app3_proto="http://" -e arcadia_app3_domain="app3" -e arcadia_backend_proto="http://" -e arcadia_backend_domain="backend" -p 80:8080 doddywid/arcadia-mainapp:v6
+   docker run -dit --restart=always --name=app2 --net=internal -e arcadia_appsite="aws_x" -e arcadia_backend_proto="http://" -e arcadia_backend_domain="backend" -p 81:8080 doddywid/arcadia-app2:v6
+   docker run -dit --restart=always --name=app3 --net=internal -e arcadia_appsite="aws_x" -p 82:8080 doddywid/arcadia-app3:v6
+   docker run -dit --restart=always --name=backend --net=internal -e arcadia_appsite="aws_x" -p 83:8080 doddywid/arcadia-backend:v6
 ```
 Note: 
 - Need to create docker network "internal" with "docker network create internal"
