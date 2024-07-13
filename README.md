@@ -25,3 +25,7 @@ Docker images are available in public repository on DockerHub as below
 \
 **4. Added NGINX config file for using NGINX as LB**\
    When using NGINX as LB for routing traffic to respective microservice, refer to [nginx-arcadia.conf](https://github.com/doddywid/doddywid-demo-app-arcadia-finance-v6/blob/main/nginx-arcadia.conf) file.
+
+\
+**5. All container listen on port 8080**\
+   The containers are built using security best practice of non-priviledged/non-root mode. Listen port is changed to 8080.
