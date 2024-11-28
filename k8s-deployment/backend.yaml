@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: arcadia-backend
+  name: arcadia-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: arcadia-backend
+  template:
+    metadata:
+      labels:
+        app: arcadia-backend
+    spec:
+      containers:
+      - image: doddywid/arcadia-backend:v6
+        name: arcadia-backend
+        env:
+        - name: arcadia_appsite
+          value: "my-site-name"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: arcadia-backend-svc
+  name: arcadia-backend-svc
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: arcadia-backend
