@@ -19,7 +19,7 @@ spec:
         name: arcadia-mainapp
         env:
         - name: arcadia_appsite
-          value: "mk8s_udf_cluster"
+          value: "my-site-name"
         - name: arcadia_app2_proto
           value: "http://"
         - name: arcadia_app2_domain
