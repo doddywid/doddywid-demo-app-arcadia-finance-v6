@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: arcadia-app3
+  name: arcadia-app3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: arcadia-app3
+  template:
+    metadata:
+      labels:
+        app: arcadia-app3
+    spec:
+      containers:
+      - image: doddywid/arcadia-app3:v6
+        name: arcadia-app3
+        env:
+        - name: arcadia_appsite
+          value: "my-site-name"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: arcadia-app3-svc
+  name: arcadia-app3-svc
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: arcadia-app3
