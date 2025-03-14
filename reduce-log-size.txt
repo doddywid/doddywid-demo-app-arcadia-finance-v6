@@ -1,0 +1,12 @@
+The container will generate logs when accessed.
+To avoid the logs from piling up, add this command in docker run
+
+--log-driver=json-file --log-opt max-size=100k --log-opt max-file=1
+
+
+Example:
+========
+docker run --log-driver=json-file --log-opt max-size=100k --log-opt max-file=1 -dit --restart=always --name=mainapp --net=internal -e arcadia_appsite="mysite" -e arcadia_app2_proto="http://" -e arcadia_app2_domain="app2:8080" -e arcadia_app3_proto="http://" -e arcadia_app3_domain="app3:8080" -e arcadia_backend_proto="http://" -e arcadia_backend_domain="backend:8080" -p 8080:8080 doddywid/arcadia-mainapp:v6
+docker run --log-driver=json-file --log-opt max-size=100k --log-opt max-file=1 -dit --restart=always --name=app2 --net=internal -e arcadia_appsite="mysite" -e arcadia_backend_proto="http://" -e arcadia_backend_domain="backend:8080" -p 8081:8080 doddywid/arcadia-app2:v6
+docker run --log-driver=json-file --log-opt max-size=100k --log-opt max-file=1 -dit --restart=always --name=app3 --net=internal -e arcadia_appsite="mysite" -p 8082:8080 doddywid/arcadia-app3:v6
+docker run --log-driver=json-file --log-opt max-size=100k --log-opt max-file=1 -dit --restart=always --name=backend --net=internal -e arcadia_appsite="mysite" -p 8083:8080 doddywid/arcadia-backend:v6
